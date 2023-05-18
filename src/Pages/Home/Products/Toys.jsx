@@ -4,7 +4,6 @@ import SingleToy from './SingleToy';
 
 const Toys = () => {
     const toys = useLoaderData()
-    console.log(toys);
     return (
         <div>
             <h1 className='text-center text-2xl'>Total Toys: {toys.length}</h1>
