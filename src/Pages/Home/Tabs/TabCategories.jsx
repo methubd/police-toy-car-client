@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Truck from './Categories/Truck';
 import Suv from './Categories/Suv';
+import Ambulance from './Categories/Ambulance';
 
 const TabCategories = () => {
 
@@ -74,9 +75,13 @@ const TabCategories = () => {
                         </div>
                     </TabPanel>
                     <TabPanel>
-                        <div className='bg-slate-500'>
-                            <img src="" alt="" />
-                            <button>Hello</button>
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-6 md:p-10'>
+                            {
+                                ambulance.map(amb => <Ambulance
+                                    key={amb._id}
+                                    amb={amb}
+                                ></Ambulance>)
+                            }
                         </div>
                     </TabPanel>
                 </Tabs>            
