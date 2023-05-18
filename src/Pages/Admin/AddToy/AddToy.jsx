@@ -5,6 +5,7 @@ const AddToy = () => {
 
     const handleAddToy = event => {
         event.preventDefault();
+
         const form = event.target;
         const name = form.name.value;
         const subCategory = form.subCategory.value;
@@ -15,6 +16,7 @@ const AddToy = () => {
         const rating = form.rating.value;
         const image = form.image.value;
         const details = form.details.value;
+
         const newToy = {name, subCategory, seller, quantity, email, price, rating, image, details};
 
         fetch('http://localhost:5000/toys', {
@@ -24,6 +26,7 @@ const AddToy = () => {
             },
             body: JSON.stringify(newToy)
         })
+
         .then(res => res.json())
         .then(data => {
             if(data.insertedId){
@@ -34,9 +37,9 @@ const AddToy = () => {
                     showConfirmButton: false,
                     timer: 1500
                   })
+                  form.reset();
             }
         })
-
     }
     return (
         <div>

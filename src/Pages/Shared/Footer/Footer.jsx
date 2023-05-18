@@ -4,7 +4,7 @@ import { BeakerIcon } from '@heroicons/react/24/solid'
 const Footer = () => {
     return (
         <>
-            <div className='mt-10 bg-purple-50 p-10 grid grid-cols-1 md:grid-cols-4 gap-6'>
+            <div className='mt-10 bg-purple-100 p-10 grid grid-cols-1 md:grid-cols-4 gap-6'>
                 <div>
                     <h1 className='text-gray-600 font-semibold py-5'>About Us</h1>
                     <p className='text-sm'>We are establishing our business with good strategies. Join us and sale your product in few clicks.</p>
