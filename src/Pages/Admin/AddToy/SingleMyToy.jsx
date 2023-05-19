@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 
-const SingleMyToy = ({toy}) => {
-    const [myToy, setMyToy] = useState(toy);
-    const {name, userEmail, seller, price, quanity, _id} = myToy;
+
+const SingleMyToy = ({toy, handleDeleteMyToy}) => {    
+    const {name, userEmail, seller, price, quanity, _id} = toy;
+
+    const handleEditToy = id => {
+        console.log(id);
+    }
+
     return (
         <div>
             <div className="overflow-x-auto">
@@ -15,8 +20,12 @@ const SingleMyToy = ({toy}) => {
                     <td className='text-gray-500'>{seller}</td>
                     <td className='font-bold'>$ {price}</td>
                     <td>{quanity}</td>
+
+                    <Link to={`/updateToy/${_id}`}>
                     <button className='bg-green-500 px-2 text-white rounded-md'>Edit</button>
-                    <button className='bg-red-500 px-2 text-white font-bold rounded-md'>X</button>
+                    </Link>
+                    
+                    <button onClick={() => handleDeleteMyToy(_id)} className='bg-red-500 px-2 text-white font-bold rounded-md'>X</button>
                 </tr>
                 </tbody>
             </table>
