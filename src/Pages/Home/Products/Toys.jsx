@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import SingleToy from './SingleToy';
 
 const Toys = () => {
     const toys = useLoaderData()
-    
-
-    
 
     return (
         <div>
