@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useTitle from '../../../Hooks/useTitle';
 
 const Error = () => {
+    useTitle('404 Error')
     return (
         <div className='text-center'>
             <img className='w-2/4 mx-auto mt-10' src="https://img.freepik.com/free-vector/page-found-concept-illustration_114360-1869.jpg" alt="" />

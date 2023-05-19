@@ -45,7 +45,7 @@ const TabCategories = () => {
     return (
         <div className='mt-20'>
             <h1 className='text-center text-2xl font-semibold'>See Products by Category</h1>
-                <div className='w-2/3 mx-auto text-center py-10'>
+                <div className='w-3/4 mx-auto text-center py-10'>
                 <Tabs>
                     <TabList>
                         <Tab>Truck</Tab>
