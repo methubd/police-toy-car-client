@@ -2,7 +2,7 @@ import React from 'react';
 
 const Facilities = () => {
     return (
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-5 p-10'>
             <div className='bg-gray-400 text-center p-5 rounded-lg'>
                 <img className='w-20 rounded-full border mx-auto' src="https://media.istockphoto.com/id/918558150/vector/fast-delivery-logo-fast-delivery-typographic-monochrome-inscription.jpg?s=612x612&w=0&k=20&c=r4XUOE0MZBbGskHpDGuqCDtcO1HEWQBLQ9w3ZozmYA8=" alt="" />
                 <h1 className='text-white font-bold text-lg'>FAST DELIVERY</h1>

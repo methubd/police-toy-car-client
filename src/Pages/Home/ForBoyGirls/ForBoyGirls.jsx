@@ -2,7 +2,7 @@ import React from 'react';
 
 const ForBoyGirls = () => {
     return (
-        <div className='md:flex border'>
+        <div className='md:flex border p-10'>
             <div>
                 <div className='absolute'>
                     <h3 className='text-3xl'>FOR</h3>
