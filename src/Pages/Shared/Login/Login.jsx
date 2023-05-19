@@ -4,7 +4,7 @@ import { AuthContext } from '../../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
 
 const Login = () => {
-    const {googleLogin} = useContext(AuthContext);
+    const {googleLogin, passwordLogin} = useContext(AuthContext);
 
     const navigate = useNavigate();
 
@@ -28,10 +28,35 @@ const Login = () => {
         })
     }
 
+    const handlePasswordLogin = event => {
+        event.preventDefault()
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password);
+        passwordLogin(email, password)
+        .then(result => {
+            const loggedUser = result.user
+            if(loggedUser){
+                Swal.fire({
+                    position: 'top',
+                    icon: 'success',
+                    title: 'Successfully Logged In',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }
+            navigate('/')
+        })
+        .catch(error => {
+            console.log(error.message);
+        })
+    }
+
     return (
         <div className='md:w-2/3 bg-purple-100 mx-auto p-10 text-center'>
             <h1 className='font-bold text-xl'>Please Login</h1>
-            <form>
+            <form onSubmit={handlePasswordLogin}>
 
                 <input 
                 className='p-2 bg-purple-50 md:w-2/3 w-full border border-gray-300 md:my-2 mt-5' 
