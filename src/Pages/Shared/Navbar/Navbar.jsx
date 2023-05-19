@@ -1,9 +1,28 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Navbar = () => {
     const {user, logOut} = useContext(AuthContext);
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        logOut()
+        .then(result => {
+            const userStatus = result?.user;
+            if(userStatus === undefined){
+                Swal.fire({
+                    position: 'top',
+                    icon: 'success',
+                    title: 'Successfully Log Out',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+                navigate('/login')
+            }
+        })
+    }
 
 
     return (
@@ -51,12 +70,12 @@ const Navbar = () => {
                         <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz76YDsU1KW-NrjUE6WIYvEdGHNkTAQ4Kf3tyxzvA&s" />
+                            <img src={user.photoURL} />
                             </div>
                         </label>
                         <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
                             <li><a>Settings</a></li>
-                            <li onClick={logOut}><a>Logout</a></li>
+                            <li onClick={handleLogout}><a>Logout</a></li>
                         </ul>
                         </div>
                     }

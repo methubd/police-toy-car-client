@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Login = () => {
-    const {user, googleLogin} = useContext(AuthContext);
+    const {googleLogin} = useContext(AuthContext);
 
     const navigate = useNavigate();
 
@@ -11,8 +12,15 @@ const Login = () => {
         googleLogin()
         .then(result => {
             const loggedUser = result.user;
-            console.log(loggedUser);
-            
+            if(loggedUser){
+                Swal.fire({
+                    position: 'top',
+                    icon: 'success',
+                    title: 'Successfully Logged In',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }
             navigate('/')
         })
         .catch(error => {
