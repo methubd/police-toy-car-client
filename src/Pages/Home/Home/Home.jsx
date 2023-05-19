@@ -1,7 +1,8 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
-import Toys from '../Products/Toys';
 import TabCategories from '../Tabs/TabCategories';
+import ForBoyGirls from '../ForBoyGirls/ForBoyGirls';
+import Facilities from '../Facilities/Facilities';
 
 
 const Home = () => {
@@ -9,8 +10,9 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <Facilities></Facilities>
             <TabCategories></TabCategories>
-            <Toys></Toys>
+            <ForBoyGirls></ForBoyGirls>
         </div>
     );
 };

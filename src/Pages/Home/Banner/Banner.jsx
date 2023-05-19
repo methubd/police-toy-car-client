@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <div className="hero p-5 text-center md:text-left">
+        <div className="hero p-5 text-center md:text-left my-28">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <img src="https://www.kindpng.com/picc/m/4-45556_toy-car-png-car-toy-transparent-background-png.png" className="max-w-sm" />
                 <div>

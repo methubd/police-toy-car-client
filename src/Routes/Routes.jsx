@@ -9,6 +9,7 @@ import Login from "../Pages/Shared/Login/Login";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import UpdateToy from "../Pages/Admin/AddToy/UpdateToy";
 import Register from "../Pages/Shared/Register/Register";
+import Error from "../Pages/Shared/Error404/Error";
 
 const router = createBrowserRouter([
     {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
                 loader: ({params}) => fetch(`http://localhost:5000/mytoys/${params.id}`)
             }
         ]
+    }, 
+    {
+        path: '*',
+        element: <Error></Error>
     }
 ])
 
