@@ -10,9 +10,11 @@ const PrivateRoute = ({children}) => {
     }
 
     if(loader) {
-        return <div>Loading...</div>
+        return <div className='text-center'>
+            <progress className="progress w-56 text-center"></progress>
+        </div>
     }
-    
+
     return <Navigate to='/login'></Navigate>
 };
 

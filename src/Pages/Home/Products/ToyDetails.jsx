@@ -1,26 +1,35 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../../Providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const ToyDetails = () => {
-
+    const {user} = useContext(AuthContext);
+    const userEmail = user.email;
     const {_id, name, price, quantity, seller, subCategory, rating, image, details, email} = useLoaderData();
 
-    const handleAddMyToys = () => {
+    const handleAddMyToys = () => {        
+        const myToy = {name, userEmail, seller, price, quantity}        
 
-        //TODO: add logged user email, and ucomment the fetch part
-        
-        const myToy = {name, email, seller}
-
-        // fetch('http://localhost:5000/myToys', {
-        //     method: 'POST',
-        //     headers: {
-        //         "content-type" : "application/json"
-        //     },
-        //     body: JSON.stringify(myToy)
-        // })
+        fetch('http://localhost:5000/myToys', {
+            method: 'POST',
+            headers: {
+                "content-type" : "application/json"
+            },
+            body: JSON.stringify(myToy)
+        })
         .then(res => res.json())
         .then(data => {
-            console.log(data, myToy);
+            if(data.insertedId){
+                Swal.fire({
+                    position: 'top',
+                    icon: 'success',
+                    title: 'Successfully Added',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }
+            console.log(data);
         })
     }
     
