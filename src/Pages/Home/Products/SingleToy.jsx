@@ -19,7 +19,7 @@ const SingleToy = ({toy}) => {
                 <p className='bg-green-200 p-1 text-gray-500 mx-1'>Available: {quantity} pcs</p>
             </div>
 
-            <Link to={`toyDetails/${_id}`}>
+            <Link to={`/toyDetails/${_id}`}>
             <button className='bg-purple-500 px-5 py-1 rounded-md text-white mt-4'>Details</button>
             </Link>
 
