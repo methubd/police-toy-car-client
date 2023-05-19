@@ -53,10 +53,13 @@ const AddToy = () => {
                     placeholder='Please type ( ... Toy Name )' required/>
                     
                     <div className=' md:w-2/3 mx-auto md:flex my-2'>
-                        <input className='p-2 bg-purple-50 md:w-2/3 border border-gray-300 md:me-5' 
-                        type="text" 
-                        name="subCategory" 
-                        placeholder='Sub Category ( ... Jeep, Regular )' />
+
+                        <select className="md:w-2/3 mx-auto md:flex px-2 bg-purple-50 mr-5 text-gray-400 border border-gray-300" name='subCategory'>
+                        <option className='' disabled selected>Sub Category</option>
+                        <option>SUV</option>
+                        <option>Ambulance</option>
+                        <option>Truck</option>
+                        </select>
                         
                         <input className='p-2 bg-purple-50 md:w-2/3 border border-gray-300' 
                         type="text" 
