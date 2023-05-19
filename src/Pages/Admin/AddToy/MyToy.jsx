@@ -47,7 +47,7 @@ const MyToy = () => {
 
     return (
         <div>
-            <h1 className='font-semibold text-2xl text-center py-2 bg-purple-100 text-gray-600'>Total Added Products: {myToys.length}</h1>
+            <h1 className='font-semibold text-2xl text-center py-2 bg-purple-100 text-gray-600'>Total Added Toys: {myToys.length}</h1>
             <div className='py-5'>
                 
                 {
