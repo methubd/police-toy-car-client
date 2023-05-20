@@ -18,7 +18,7 @@ const ForBoyGirls = () => {
                 <img className='h-full' src="https://thumbs.dreamstime.com/b/funny-child-school-girl-yellow-background-148933750.jpg" alt="" />
             </div>
             <div>
-                <div className='absolute '>
+                <div className='absolute'>
                     <h3 className='text-3xl'>FOR</h3>
                     <h1 className='text-6xl font-bold'>BOYS</h1>
                     <button className='bg-purple-500 px-3 text-white'>SHOP NOW</button>

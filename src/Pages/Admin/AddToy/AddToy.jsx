@@ -46,35 +46,35 @@ const AddToy = () => {
         <div>
             <h1 className='font-semibold text-2xl text-center py-2 bg-purple-100 text-gray-600'>Add a Toy</h1>
             <div>
-                <form onSubmit={handleAddToy} className='text-center mt-10'>
+                <form onSubmit={handleAddToy} className='text-center mt-10 w-3/4 mx-auto'>
 
-                    <input className='p-2 bg-purple-50 md:w-2/3 border border-gray-300 my-1' 
+                    <input className='p-2 bg-purple-50 md:w-2/3 w-full border border-gray-300 my-1' 
                     type="text" 
                     name="name" 
                     placeholder='Please type ( ... Toy Name )' required/>
                     
                     <div className=' md:w-2/3 mx-auto md:flex my-2'>
 
-                        <select className="md:w-2/3 mx-auto md:flex px-2 bg-purple-50 mr-5 text-gray-400 border border-gray-300" name='subCategory'>
+                        <select className="md:w-2/3 w-full py-2 mx-auto md:flex px-2 bg-purple-50 mr-5 text-gray-400 border border-gray-300" name='subCategory'>
                         <option className='' disabled selected>Sub Category</option>
                         <option>SUV</option>
                         <option>Ambulance</option>
                         <option>Truck</option>
                         </select>
                         
-                        <input className='p-2 bg-purple-50 md:w-2/3 border border-gray-300' 
+                        <input className='p-2 bg-purple-50 w-full md:w-2/3 border border-gray-300' 
                         type="text" 
                         name="seller" 
                         placeholder='Seller Name' />
                     </div>
 
                     <div className=' md:w-2/3 mx-auto md:flex my-2'>
-                        <input className='p-2 bg-purple-50 md:w-2/3 border border-gray-300 md:me-5' 
+                        <input className='p-2 w-full bg-purple-50 md:w-2/3 border border-gray-300 md:me-5' 
                         type="text" 
                         name="quantity" 
                         placeholder='Available Quantity' />
 
-                        <input className='p-2 bg-purple-50 md:w-2/3 border border-gray-300 ' 
+                        <input className='p-2 w-full bg-purple-50 md:w-2/3 border border-gray-300 ' 
                         type="text" 
                         name="email" 
                         placeholder='Seller Email ( ...@email.com )' />
@@ -82,25 +82,25 @@ const AddToy = () => {
                     </div>
 
                     <div className=' md:w-2/3 mx-auto md:flex my-2'>
-                        <input className='p-2 bg-purple-50 md:w-2/3 border border-gray-300 md:me-5' 
+                        <input className='p-2 w-full bg-purple-50 md:w-2/3 border border-gray-300 md:me-5' 
                         type="text" 
                         name="price" 
                         placeholder='Price ( .../product )' />
 
-                        <input className='p-2 bg-purple-50 md:w-2/3 border border-gray-300 ' 
+                        <input className='p-2 w-full bg-purple-50 md:w-2/3 border border-gray-300 ' 
                         type="text" 
                         name="rating" 
                         placeholder='Ratings (... 1 - 5)' />
                         
                     </div>
 
-                        <input className='p-2 bg-purple-50 md:w-2/3 border border-gray-300 my-1' 
+                        <input className='p-2 w-full bg-purple-50 md:w-2/3 border border-gray-300 my-1' 
                         type="text" 
                         name="image" 
                         placeholder='Photo URL ( ...https:// )' required/>
 
                     <div className=''>
-                        <textarea className='p-2 bg-purple-50 md:w-2/3 border border-gray-300 my-1' 
+                        <textarea className='p-2 w-full bg-purple-50 md:w-2/3 border border-gray-300 my-1' 
                         type="text" 
                         name="details"
                         cols="30" rows="5" 

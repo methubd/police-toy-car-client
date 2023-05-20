@@ -7,7 +7,6 @@ import Swal from 'sweetalert2';
 const Navbar = () => {
     const {user, logOut} = useContext(AuthContext);
     const userName = user?.displayName;
-    console.log(userName);
 
     const navigate = useNavigate();
 
@@ -49,6 +48,7 @@ const Navbar = () => {
                             }
 
                             <li><Link to='/blog'>Blog</Link></li>   
+                            <li><Link to='/login'>Login</Link></li>
                         </ul>
                         </div>
                         
@@ -70,17 +70,18 @@ const Navbar = () => {
                                 </>
                             }
                             <li><Link to='/blog'>Blog</Link></li>                            
+                                                    
                         </ul>
                     </div>
 
-                    {user &&
+                    {user ?
                         <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
 
                             {/* TODO: text not showing */}
                             
                             <Tooltip
-                                content="Hello"
+                                content={userName}
                                 animate={{
                                     mount: { scale: 1, y: 0 },
                                     unmount: { scale: 0, y: 25 },
@@ -100,6 +101,10 @@ const Navbar = () => {
                             <li onClick={handleLogout}><a>Logout</a></li>
                         </ul>
                         </div>
+                        :                        
+                        <ul className='menu menu-horizontal px-1'>
+                            <li><Link to='/login'>Login</Link></li>
+                        </ul>
                     }
                     
                 </div>

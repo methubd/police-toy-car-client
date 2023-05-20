@@ -30,7 +30,7 @@ const Toys = () => {
             <h1 className='text-center text-2xl'>Explore our exclusive collections</h1>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-6 md:p-10'>
                     {
-                        toys.map(toy => <SingleToy
+                        toys?.map(toy => <SingleToy
                         key={toy._id}
                         toy={toy}
                         ></SingleToy>)

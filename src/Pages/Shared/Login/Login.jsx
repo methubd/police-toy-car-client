@@ -2,12 +2,14 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
+import useTitle from '../../../Hooks/useTitle';
 
 const Login = () => {
+    useTitle('Login')
+
     const {googleLogin, passwordLogin} = useContext(AuthContext);
-
     const navigate = useNavigate();
-
+    
     const handleGoogleLogin = () => {
         googleLogin()
         .then(result => {
@@ -28,6 +30,7 @@ const Login = () => {
         })
     }
 
+    
     const handlePasswordLogin = event => {
         event.preventDefault()
         const form = event.target;

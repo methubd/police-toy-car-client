@@ -7,7 +7,7 @@ import useTitle from '../../../Hooks/useTitle';
 const ToyDetails = () => {
     useTitle('Toy Detail')
     const {user} = useContext(AuthContext);
-    const userEmail = user.email;
+    const userEmail = user?.email;
     const {_id, name, price, quantity, seller, subCategory, rating, image, details, email} = useLoaderData();
 
     const handleAddMyToys = () => {        
