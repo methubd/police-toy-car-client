@@ -7,7 +7,7 @@ const Toys = () => {
     useTitle('All Toys')
     const allToys = useLoaderData()
     const loadedToys = allToys.slice(0, 20);
-    
+
     const [toys, setToys] = useState(loadedToys)
 
     const handleSearch = event => {
@@ -17,14 +17,14 @@ const Toys = () => {
             setToys(searchResult)
         }
         else{
-            setToys(allToys)
+            setToys(loadedToys)
         }
     }
 
     return (
         <div>
-            <div className='text-center py-5'>
-                <input onChange={handleSearch} className='p-2 bg-purple-50 md:w-1/3 border border-gray-300 my-1' type="text" name="search" placeholder="Search by Name" />
+            <div className='text-right p-10'>
+                <input onChange={handleSearch} className='outline-none p-2 bg-purple-50 md:w-1/3 border border-gray-300 my-3' type="text" name="search" placeholder="Search by Name" />
                 <hr className='pt-5'/>
             </div>
             <h1 className='text-center text-2xl'></h1>
