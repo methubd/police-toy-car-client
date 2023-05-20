@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Tooltip } from "@material-tailwind/react";
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
@@ -75,9 +76,24 @@ const Navbar = () => {
                     {user &&
                         <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+
+                            {/* TODO: text not showing */}
+                            
+                            <Tooltip
+                                content="Hello"
+                                animate={{
+                                    mount: { scale: 1, y: 0 },
+                                    unmount: { scale: 0, y: 25 },
+                                }}
+                                >
+
                             <div className="w-10 rounded-full">
-                            <img src={user?.photoURL} />
+                                <img src={user?.photoURL} />
                             </div>
+                            </Tooltip>
+
+                            {/* TODO: text not showing */}
+
                         </label>
                         <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
                             <li><a>Settings</a></li>
