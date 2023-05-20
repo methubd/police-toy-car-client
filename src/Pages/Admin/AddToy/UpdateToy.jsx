@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData, useNavigate } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import useTitle from '../../../Hooks/useTitle';
 
@@ -62,10 +62,11 @@ const UpdateToy = () => {
                         placeholder='Price ( .../product )' defaultValue={price} />                       
                     </div>
 
-                    <div className=''>
+                    <div className='my-5'>
 
                         <input className='p-2 px-10 text-lg bg-purple-500 text-white cursor-pointer' type="submit" value="Update" />
                     </div>
+                    <Link className='text-sm bg-gray-400 text-white p-1 px-5' to='/myToys'>Go Back</Link>
                 </form>
         </div>
     );

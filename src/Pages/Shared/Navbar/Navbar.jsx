@@ -5,6 +5,9 @@ import Swal from 'sweetalert2';
 
 const Navbar = () => {
     const {user, logOut} = useContext(AuthContext);
+    const userName = user?.displayName;
+    console.log(userName);
+
     const navigate = useNavigate();
 
     const handleLogout = () => {
@@ -49,7 +52,9 @@ const Navbar = () => {
                         </div>
                         
                         <img className='w-24' src="https://i.pinimg.com/736x/b4/6f/79/b46f79268ff1721cadcd7ddbcd71291d--rc-cars-logo-design.jpg" alt="" />
-                        <Link className='btn btn-ghost normal-case text-xl' to='/'>Police Toy Car</Link>
+                        <Link className='btn btn-ghost normal-case text-xl' to='/'>
+                            POLICE toy car
+                        </Link>
                         
                     </div>
 
