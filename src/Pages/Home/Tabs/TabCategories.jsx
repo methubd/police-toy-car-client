@@ -4,6 +4,8 @@ import 'react-tabs/style/react-tabs.css';
 import Truck from './Categories/Truck';
 import Suv from './Categories/Suv';
 import Ambulance from './Categories/Ambulance';
+import aos from 'aos';
+import 'aos/dist/aos.css'
 
 const TabCategories = () => {
 
@@ -41,9 +43,13 @@ const TabCategories = () => {
         })
     }, [])
 
+    useEffect(() => {
+        aos.init();
+    },[])
+
 
     return (
-        <div className='mt-20'>
+        <div data-aos="fade-up" className='mt-20'>
             <h1 className='text-center text-2xl font-semibold'>See Products by Category</h1>
                 <div className='w-3/4 mx-auto text-center py-10'>
                 <Tabs>

@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import aos from 'aos';
+import 'aos/dist/aos.css'
 
 const ForBoyGirls = () => {
+    useEffect(() => {
+        aos.init();
+    },[])
+
     return (
-        <div className='md:flex border p-10'>
+        <div data-aos="zoom-in-down" className='md:flex border p-10'>
             <div>
                 <div className='absolute'>
                     <h3 className='text-3xl'>FOR</h3>

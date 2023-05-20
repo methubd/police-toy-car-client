@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import aos from 'aos';
+import 'aos/dist/aos.css'
 
 const SingleToy = ({toy}) => {
     const {_id, name, price, quantity, seller, subCategory, rating, image} = toy;
+
+    useEffect(() => {
+        aos.init();
+    },[])
+
     return (
-        <div className='border border-gray-300 rounded-md p-2 shadow-lg text-center'>
+        <div data-aos="fade-up" className='border border-gray-300 rounded-md p-2 shadow-lg text-center'>
             <img className='md:w-72' src={image} alt="" />
             <h1 className='text-2xl font-semibold'>{name}</h1>
             <p className='text-gray-600'>Price: $ {price}</p>
