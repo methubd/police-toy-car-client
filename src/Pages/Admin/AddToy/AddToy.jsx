@@ -20,7 +20,7 @@ const AddToy = () => {
 
         const newToy = {name, subCategory, seller, quantity, email, price, rating, image, details};
 
-        fetch('http://localhost:5000/toys', {
+        fetch('https://assignment-11-server-nu.vercel.app/toys', {
             method: 'POST',
             headers: {
                 "content-type" : "application/json"
@@ -106,7 +106,7 @@ const AddToy = () => {
                         cols="30" rows="5" 
                         placeholder='Type details abut your prodcut.' required/> <br />
 
-                        <input className='p-2 px-10 text-lg bg-purple-500 text-white' type="submit" value="Add" />
+                        <input className='p-2 px-10 text-lg bg-purple-500 text-white cursor-pointer' type="submit" value="Add" />
                     </div>
                 </form>
             </div>

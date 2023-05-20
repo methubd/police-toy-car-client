@@ -10,7 +10,7 @@ const MyToy = () => {
     const email = user?.email;
     const [myToys, setMytoys] = useState([]);
 
-    const url = `http://localhost:5000/myToys?email=${email}`
+    const url = `https://assignment-11-server-nu.vercel.app/myToys?email=${email}`
 
     useEffect(() => {
         fetch(url)
@@ -32,7 +32,7 @@ const MyToy = () => {
           }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/myToys/${id}`, {
+                fetch(`https://assignment-11-server-nu.vercel.app/myToys/${id}`, {
                     method: 'DELETE',
                 })
                 Swal.fire(

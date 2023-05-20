@@ -13,7 +13,7 @@ const ToyDetails = () => {
     const handleAddMyToys = () => {        
         const myToy = {name, userEmail, seller, price, quantity}        
 
-        fetch('http://localhost:5000/myToys', {
+        fetch('https://assignment-11-server-nu.vercel.app/myToys', {
             method: 'POST',
             headers: {
                 "content-type" : "application/json"

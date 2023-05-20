@@ -17,7 +17,7 @@ const TabCategories = () => {
 
     //Trucks Data Loaded
     useEffect(() => {
-        fetch('http://localhost:5000/truck')
+        fetch('https://assignment-11-server-nu.vercel.app/truck')
         .then(res => res.json())
         .then(data => {
             setTrucks(data.slice(0, 2));
@@ -26,7 +26,7 @@ const TabCategories = () => {
 
     //SUV Data Loaded
     useEffect(() => {
-        fetch('http://localhost:5000/suv')
+        fetch('https://assignment-11-server-nu.vercel.app/suv')
         .then(res => res.json())
         .then(data => {
             setSuv(data.slice(0, 2));
@@ -36,7 +36,7 @@ const TabCategories = () => {
     //Ambulance Data Loaded
 
     useEffect(() => {
-        fetch('http://localhost:5000/ambulance')
+        fetch('https://assignment-11-server-nu.vercel.app/ambulance')
         .then(res => res.json())
         .then(data => {
             setAmbulance(data.slice(0, 2));
@@ -50,7 +50,7 @@ const TabCategories = () => {
 
     return (
         <div data-aos="fade-up" className='mt-20'>
-            <h1 className='text-center text-2xl font-semibold'>See Products by Category</h1>
+            <h1 className='text-center text-2xl font-semibold'>See Toys by Category</h1>
                 <div className='w-3/4 mx-auto text-center py-10'>
                 <Tabs>
                     <TabList>

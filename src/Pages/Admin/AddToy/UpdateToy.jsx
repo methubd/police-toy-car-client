@@ -18,7 +18,7 @@ const UpdateToy = () => {
         const oldToy = {name, quantity, price}
         console.log(oldToy);
 
-        fetch(`http://localhost:5000/mytoys/${_id}`, {
+        fetch(`https://assignment-11-server-nu.vercel.app/mytoys/${_id}`, {
             method: 'PUT',
             headers: {
                 "content-type" : "application/json"
@@ -64,7 +64,7 @@ const UpdateToy = () => {
 
                     <div className=''>
 
-                        <input className='p-2 px-10 text-lg bg-purple-500 text-white' type="submit" value="Update" />
+                        <input className='p-2 px-10 text-lg bg-purple-500 text-white cursor-pointer' type="submit" value="Update" />
                     </div>
                 </form>
         </div>

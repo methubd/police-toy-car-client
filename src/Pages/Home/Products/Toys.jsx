@@ -23,11 +23,11 @@ const Toys = () => {
 
     return (
         <div>
-            <div className='text-right p-10'>
-                <input onChange={handleSearch} className='outline-none p-2 bg-purple-50 md:w-1/3 border border-gray-300 my-3' type="text" name="search" placeholder="Search by Name" />
+            <div className='md:text-right text-center md:p-5'>
+                <input onChange={handleSearch} className='outline-none p-2 bg-purple-50 w-full md:w-1/3 border border-gray-300 my-2 mx-5 md:mx-0' type="text" name="search" placeholder="Search by Toy Name" />
                 <hr className='pt-5'/>
             </div>
-            <h1 className='text-center text-2xl'></h1>
+            <h1 className='text-center text-2xl'>Explore our exclusive collections</h1>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-6 md:p-10'>
                     {
                         toys.map(toy => <SingleToy
